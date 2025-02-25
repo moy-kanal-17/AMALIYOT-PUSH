@@ -1,68 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub-like Design</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f6f8fa;
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f6f8fa;
+        animation: fadeIn 1s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
-        .header {
-            background-color: #24292e;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        to {
+          opacity: 1;
         }
-        .header a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
+      }
+      .header {
+        background-color: #24292e;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: slideDown 1s ease-in-out;
+      }
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
         }
-        .header a:hover {
-            text-decoration: underline;
+        to {
+          transform: translateY(0);
         }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .header a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+      .header a:hover {
+        text-decoration: underline;
+        color: #0366d6;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1.5s ease-in-out;
+      }
+      .footer {
+        background-color: #24292e;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        animation: slideUp 1s ease-in-out;
+      }
+      @keyframes slideUp {
+        from {
+          transform: translateY(100%);
         }
-        .footer {
-            background-color: #24292e;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+        to {
+          transform: translateY(0);
         }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <div class="logo">
-            <a href="#">GitHub</a>
-        </div>
-        <nav>
-            <a href="#">Pull requests</a>
-            <a href="#">Issues</a>
-            <a href="#">Marketplace</a>
-            <a href="#">Explore</a>
-        </nav>
+      <div class="logo">
+        <a href="https://github.com">GitHub</a>
+      </div>
+      <nav>
+        <a href="https://github.com/pulls">Pull requests</a>
+        <a href="https://github.com/issues">Issues</a>
+        <a href="https://github.com/marketplace">Marketplace</a>
+        <a href="https://github.com/explore">Explore</a>
+      </nav>
     </div>
     <div class="container">
-        <h1>Welcome to GitHub</h1>
-        <p>This is a simple GitHub-like design template.</p>
+      <h1>Welcome to GitHub</h1>
+      <p>This is a simple GitHub-like design template.</p>
     </div>
     <div class="footer">
-        <p>&copy; 2023 GitHub, Inc.</p>
+      <p>&copy; 2023 GitHub, Inc.</p>
     </div>
-</body>
-</html></div>
+  </body>
+</html>
